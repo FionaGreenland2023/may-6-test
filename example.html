@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .result-area{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+        #result{
+            display: inline-block;
+            width: 190px;
+        }
+
+    </style>
 </head>
 <body>
+    <main id="app">
+        <h1>Calculate Area</h1>
+        <div class="result-area">
+            <p>Result : <span id="result"></span></p>
+            <button class="StoreBtn" onclick="storeFun()">Store</button>
+            <button class="clearBtn" onclick="clearFun()">Clear</button>
+        </div>
+
+        <div class="">
+            <input type="number" id="widthInput" placeholder="width">
+            <input type="number" id="heightInput" placeholder="height">
+            <button id="calcBtn" onclick="handleBtn()">Calculate</button>
+        </div>
+
+        <div id="records"></div>
+
+
+    </main>
     
+      
+    <script src="./js/input-output.js"></script>
 </body>
 </html>

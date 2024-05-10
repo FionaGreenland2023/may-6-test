@@ -1,25 +1,27 @@
-// const textinput = document.getElementById("textinput");
-// const heading = document.getElementById("heading");
-// const btn = document.getElementById("btn");
+const result = document.getElementById("result");
+const widthInput = document.getElementById("widthInput")
+const heightInput = document.getElementById("heightInput")
+const records = document.getElementById("records")
 
 
+//logic
 
-// const run = () => {
-//     const data = textinput.value
-//     heading.innerText = data ;
-// } ;
+const areaCalc = (w,h) => w * h ;
 
+//
 
-const heading = document.getElementById("heading");
-const btn = document.getElementById("btn");
-
-const textInput = document.getElementById("textInput");
-
-const run = () => {
-  // input
-  const data = textInput.value;
-
-  // output
-  heading.innerText = data;
-  textInput.value = null;
+const handleBtn = ( ) => {
+  const areaResult = areaCalc(widthInput.valueAsNumber,heightInput.valueAsNumber);
+// result.innerText = areaResult + " sqft"
+result.innerHTML =  `${widthInput.valueAsNumber} ft * ${heightInput.valueAsNumber} ft = ${areaResult} ft <sup>2</sup> `
+widthInput.value = null;
+heightInput.value = null;
 };
+
+const clearFun = () => {
+result.innerHTML = "";
+}
+
+const storeFun = () => {
+  records.innerHTML += `<li>${result.innerHTML}</li>`
+} 
