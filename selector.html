@@ -6,20 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Selector ko san kyi tar pr</h1>
+    <h1 style="color: red; background-color: blue; text-align: center;">Selector ko san kyi tar pr</h1>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta non exercitationem dignissimos nesciunt ex delectus atque officiis, impedit at!</p>
 
     
     <ul class="lists">
-        <li>Banana</li>
-        <li>Orange</li>
-        <li>Straw</li>
-        <li>Lychee</li>
+        <li class="a">Banana</li>
+        <li class="b">Orange</li>
+        <li class="b">Straw</li>
+        <li class="a">Lychee</li>
     </ul>
-    <br><br>
+    
 
     <form action="">
+        <input type="text" id="yourName" name="your_name">
+        <br><br>
         <div class="">
             <label for="male">Male</label>
             <input type="radio" id="male" value="male" name="gender">
@@ -28,6 +30,13 @@
             <label for="female">Female</label>
             <input type="radio" id="female" value="female" name="gender">
         </div>
+        <br>
+        <a href="http://google.com" id="link1">Google</a>
+        <br>
+        <img src="./photo/kpop.jpg" id="picture" 
+        style="width: 200px;">
+        <button onclick="change('./photo/kpop.jpg')">pic 1</button>
+        <button onclick="change('./photo/tumblr_1.jpg')">pic 2</button>
     </form>
     <script src="./js/selectors.js"></script>
 </body>
